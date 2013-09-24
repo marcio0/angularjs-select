@@ -1,0 +1,66 @@
+.select-picker {
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: content-box;
+    width: 400px;
+}
+
+.select-picker ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.select-picker  .search-wrapper {
+    padding: 5px 10px;
+}
+
+.search-wrapper .item-search {
+    border-radius: 15px;
+}
+
+.select-menu {
+    border-top: 1px solid #ccc;
+}
+
+.select-menu > ul {
+    width: 200px;
+    height: 100%;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.select-group {
+    box-sizing: border-box;
+    padding: 15px 10px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.select-group:hover {
+    background-color: #eee;
+}
+
+.select-group > ul {
+    display: none;
+    position: absolute;
+    height: 100%;
+    left: 200px;
+    top: 0px;
+    width: 200px;
+    overflow: auto;
+}
+
+.select-group > ul > li {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.select-group > ul > li:hover {
+    background-color: #eee;
+}
+
+.select-group:hover ul {
+    display: inherit;
+}

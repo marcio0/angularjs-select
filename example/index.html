@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>AngularJS Selectpicker Example</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../selectpicker.css">
+</head>
+<body>
+      <div ng-app="myApp">
+        <div ng-controller="Ctrl" class="container">
+            <form>
+                <div class="form-group">
+                    <label for="selector">Select:</label>
+                    <select selectpicker selectpicker-options="options" selectpicker-label="name" selectpicker-empty-text="Pick one" selectpicker-grouper="label.name" class="form-control" ng-model="value"></select>
+                </div>
+            </form>
+            <button class="btn btn-danger" ng-click="change()">Change</button>
+        </div>
+    </div>
+
+    <script type='text/javascript' src="//code.jquery.com/jquery.js"></script>
+    <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script type='text/javascript' src="../selectpicker.js"></script>
+
+    <script type='text/javascript'>
+        var myApp = angular.module('myApp', ['sp']);
+
+        function Ctrl($scope) {
+            $scope.options = [{
+                name: 'un',
+                label: {
+                    name: 'yeah'
+                }
+            }, {
+                name: 'dos',
+                label: {
+                    name: 'yeah'
+                }
+            }, {
+                name: 'tres',
+                label: {
+                    name: 'yeah'
+                }
+            }, {
+                name: 'quatro',
+                label: {
+                    name: 'yeah'
+                }
+            }, {
+                name: 'cinco',
+                label: {
+                    name: 'yeah'
+                }
+            }, {
+                name: 'cinco',
+                label: {
+                    name: 'yeah'
+                }
+            }, {
+                name: 'seis',
+                label: {
+                    name: 'yeah'
+                }
+            }, {
+                name: 'catorce',
+                label: {
+                    name: 'what'
+                }
+            /*}, {
+                name: 'fooitem',
+                label: {
+                    name: 'foo'
+                }
+            }, {
+                name: 'blaitem',
+                label: {
+                    name: 'bla'
+                }
+            }, {
+                name: 'bladoitem',
+                label: {
+                    name: 'blado'
+                }
+            }, {
+                name: 'baritem',
+                label: {
+                    name: 'bar'
+                }*/
+            }];
+
+            $scope.value = $scope.options[0];
+
+            $scope.actual = 0;
+
+            $scope.change = function () {
+                $scope.value = $scope.options[$scope.actual++];
+            };
+
+        };
+
+    </script>
+</body>
+</html>
+
+
